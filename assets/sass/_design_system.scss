@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+:root {
+    --basic-font-weight: 400;
+    --title-font-weight: 600;
+    --primary-color: #292d32;
+    --secondary-color: #ffffff;
+}
+
+/* ----------- Цвета ----------- */
+$Black_00: #2222222b;
+$Grey_00: #bcbbbb;
+$Grey_01: #292d32;
+$Grey_03: #f3f2f2;
+$Orange_00: #d5c9be;
+$Orange_01: #d78131;
+$Orange_02: #aa6320;
+$White_00: #ffffff;
+
+/* ----------- Стили шрифтов ----------- */
+
+// Подключаем шрифты разных форматов для лучшей поддержки в разных браузерах
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/Arial_Regular.eot');
+    src: local('Arial Regular'), local('Arial_Regular'),
+        url('../fonts/Arial_Regular.woff2') format('woff2'),
+        url('../fonts/Arial_Regular.woff') format('woff'),
+        url('../fonts/Arial_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prata';
+    src: url('../fonts/Prata-Regular.eot');
+    src: local('Prata Regular'), local('Prata_Regular'),
+        url('../fonts/Prata_Regular.woff2') format('woff2'),
+        url('../fonts/Prata_Regular.woff') format('woff'),
+        url('../fonts/Prata_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Миксины на шрифт Arial из макета: */
+
+/* Arial- заголовки */
+/* служебный миксин */
+@mixin title_Arial_regular_L{
+    font-family: 'Arial';
+    font-weight: var(--title-font-weight);
+    color: var(--primary-color);
+}
+
+@mixin arial_regular_L{
+    font-size: 1.5rem;
+    line-height: 150%;
+    letter-spacing: 0.1rem;
+    @include title_Arial_regular_L;
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1.3rem;
+    }
+}
+
+/* Arial- обычный текст */
+/* служебный миксин */
+@mixin title_Arial_regular_M{
+    font-family: 'Arial';
+    font-weight: var(--title-font-weight);
+    color: var(--primary-color);
+}
+
+@mixin arial_regular_M{
+    font-size: 1.2rem;
+    line-height: 120%;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    @include title_Arial_regular_M;
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1.1rem;
+    }
+}
+
+/* Arial- подтексты */
+/* служебный миксин */
+@mixin title_Arial_regular_S{
+    font-family: 'Arial';
+    font-weight: var(--basic-font-weight);
+    color: $Grey_00;
+}
+
+@mixin arial_regular_S{
+    font-size: 1.1rem;
+    line-height: 133%;
+    letter-spacing: 0.1rem;
+    @include title_Arial_regular_S;
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1rem;
+    }
+}
+
+/* Arial - италик */
+/* служебный миксин */
+@mixin text_Arial_italic{
+    font-family: 'Arial';
+    font-weight: bold;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+@mixin arial_italic{
+    font-size: 0.9rem;
+    line-height: 130%;
+    text-transform: uppercase;
+    @include text_Arial_italic;
+
+    @media screen and (min-width: 1840px) and (max-width: 2560px){
+        font-size: 1.3rem;
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 0.7rem;
+    }
+}
+
+/* Миксины на шрифт Prata из макета: */
+
+/* Prata - заголовки */
+/* служебный миксин */
+@mixin title_Prata_regular{
+    font-family: 'Prata';
+    font-weight: var(--title-font-weight);
+    color: var(--primary-color);
+}
+
+@mixin prata_regular_L{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    @include title_Prata_regular;
+
+    @media screen and (min-width: 1840px) and (max-width: 2560px){
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1rem;
+    }
+}
+
+/* ----------- Стили кнопок и ссылок ----------- */
+
+/* разные настройки размеров кнопок */
+/* для навигации в хедере и в футере */
+@mixin btn_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    height: 2.5rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+
+    border-radius: 1.5rem;
+    cursor: pointer;
+
+    @include arial_italic;
+
+    &:hover{
+        background-color: $Orange_01;
+        border: $Orange_00;
+        color: $White_00;
+
+        transition: 0.4s ease-out;
+    }
+
+    &:active{
+        background-color: $Orange_02;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 374px){
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* для кнопок секций main */
+@mixin btn_contact {
+    box-sizing: border-box;
+    height: 3.8rem;
+    width: fit-content;
+    padding: 1rem;
+    
+    border-radius: 0.2rem;
+    border: none;
+
+    font-weight: bold;
+
+    background-color: $Orange_01;
+
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    @include arial_regular_S;
+
+    &:hover{
+        background-color: $Grey_01;
+        color: $White_00;
+
+        transition: 0.2s ease-out;
+    }
+
+    &:active{
+        background-color: $Orange_02;
+    }
+}
+
+/* для кнопок секций main */
+@mixin btn_contact2 {
+    box-sizing: border-box;
+    height: 3.8rem;
+    width: fit-content;
+    padding: 1rem;
+    
+    border-radius: 0.2rem;
+    border: none;
+
+    font-weight: bold;
+    background-color: var(--primary-color);
+
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    @include arial_regular_S;
+    color: $White_00;
+
+    &:hover{
+        background-color: $Orange_01;
+        color: $White_00;
+
+        transition: 0.2s ease-out;
+    }
+
+    &:active{
+        background-color: $Orange_01;
+    }
+}
+
+/* для значка tg (ссылки на tg-бота) - в хедере и футере */
+@mixin pin_S{
+    color: $Grey_01;
+    cursor: pointer;
+
+    &:hover{
+        color: $Orange_01;
+        transition: 0.2s ease-out;
+    }
+}
+
+/* для значка tg (ссылки на tg-бота) - в секции main */
+@mixin pin_M{
+    color: $Black_00;
+    cursor: pointer;
+
+    &:hover{
+        color: $Grey_01;
+        transition: 0.2s ease-out;
+    }
+}
+
+/* ----------- Логотип ----------- */
+@mixin logo{
+    @include prata_regular_L;
+}
+
+
