@@ -43,11 +43,11 @@
 /* для значка tg (ссылки на tg-бота) - в секции main */
 /* ----------- Логотип ----------- */
 .body {
+  height: 2500px;
+  width: 98vw;
   display: grid;
   grid-template: 4.5% 1fr 7%/8% 1fr 10%;
   background-color: var(--secondary-color);
-  height: 2300px;
-  width: 98vw;
 }
 .body .header {
   grid-area: 1/1/2/4;
@@ -437,6 +437,7 @@
   gap: 0.1rem;
   border: solid rgba(34, 34, 34, 0.168627451);
   border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(34, 34, 34, 0.168627451);
 }
 .main .main__block2 .main__block2-central .main__block2-central-service:hover {
   border: solid #d5c9be;
@@ -498,7 +499,6 @@
 }
 .main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini {
   width: 60%;
-  text-decoration: none;
 }
 .main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul {
   height: 95%;
@@ -514,7 +514,7 @@
   padding: 0.2rem;
   text-align: center;
   align-content: center;
-  background-color: rgba(34, 34, 34, 0.168627451);
+  background-color: #bcbbbb;
   border-radius: 1rem;
   font-size: 1.1rem;
   line-height: 133%;
@@ -522,14 +522,13 @@
   font-family: "Arial";
   font-weight: var(--basic-font-weight);
   color: #bcbbbb;
-  color: #292d32;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li {
     font-size: 1rem;
   }
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li:hover {
+.main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li:hover, .main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li.hovered {
   background-color: #ffffff;
   border: solid 0.1rem rgba(34, 34, 34, 0.168627451);
 }
@@ -592,7 +591,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top: solid 0.1rem #292d32;
 }
 .main .main__block2 .main__block2-right .card-advantages {
   width: 100%;
@@ -600,7 +598,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   border-bottom: solid 0.1rem #f3f2f2;
 }
 .main .main__block2 .main__block2-right .card-advantages_icons {
@@ -624,6 +621,7 @@
   color: #bcbbbb;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main .main__block2 .main__block2-right .card-advantages_text {

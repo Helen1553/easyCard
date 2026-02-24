@@ -1,93 +1,109 @@
-//Функция для затемнения части хедера при прокрутке страницы
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.header__nav');
-    if (window.scrollY > 100) {
-        nav.classList.add('scrolled');
-    } 
-    else {
-        nav.classList.remove('scrolled');
-    }
-});
+document.addEventListener('DOMContentLoaded', () => {
+// Сохраненяем hover на li во 2 блоке main + добавляем класса .hovered
+    const items = document.querySelectorAll('.service-text-mini li');
+    items.forEach(li => {
+        li.addEventListener('mouseenter', () => {
+            li.classList.add('hovered');
+        });
+    });
 
-//Функция для выплывающей панели поиска
-document.addEventListener('DOMContentLoaded', function() {
+// Отменяем подсветку при клике вне любого li во 2 блоке main
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.service-text-mini li')) {
+            document.querySelectorAll('.service-text-mini li').forEach(li => {
+                li.classList.remove('hovered');
+            });
+        }
+    });
+
+// Затемняем хедер при скролле страницы
+    const nav = document.querySelector('.header__nav');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    }
+
+// Код для всплывающей панели поиска при клике на лупу
     const searchToggle = document.getElementById('searchToggle');
     const searchContainer = document.getElementById('searchContainer');
     const searchInput = document.getElementById('search');
     const clearButton = document.getElementById('clearButton');
 
-    if (searchToggle) {
-        searchToggle.addEventListener('click', function(event) {
+    if (searchToggle && searchContainer && searchInput && clearButton) {
+        searchToggle.addEventListener('click', (event) => {
+            event.preventDefault();
             if (searchContainer.classList.contains('show')) {
                 closeSearch();
             } else {
                 searchContainer.classList.add('show');
             }
         });
-    
 
         const closeSearch = () => {
             searchContainer.classList.remove('show');
             searchInput.value = '';
             clearButton.style.display = 'none';
-        }
+        };
 
-        searchInput.addEventListener('input', function() {
-            if (searchInput.value.length > 0) {
-                clearButton.style.display = 'inline';
-            } else {
-                clearButton.style.display = 'none';
-            }
+        searchInput.addEventListener('input', () => {
+            clearButton.style.display = searchInput.value.length > 0 ? 'inline' : 'none';
         });
 
-    //Функция для появления/удаления крестика в поле поиска
-        clearButton.addEventListener('click', function() {
+        clearButton.addEventListener('click', () => {
             searchInput.value = '';
             clearButton.style.display = 'none';
-            searchInput.focus(); 
+            searchInput.focus();
         });
-        
-        searchInput.addEventListener('keydown', function(event) {
+
+        searchInput.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
                 closeSearch();
             }
         });
-        
-    }}
-);
 
-//Функция для выплывающего бургер-меню
-const burger = document.querySelector("#burger");
-const popup = document.getElementById("popup");
-const body = document.body;
+        document.addEventListener('click', (event) => {
+            if (!searchContainer.contains(event.target) && !searchToggle.contains(event.target)) {
+                closeSearch();
+            }
+        });
+    }
 
-const menu = document.getElementById("menu").cloneNode(1);
+// Код для всплывающего бургера на мобилкке
+    const burger = document.querySelector("#burger");
+    const popup = document.getElementById("popup");
+    const body = document.body;
 
-burger.addEventListener("click", burgerHandler);
+    const menu = document.getElementById("menu").cloneNode(1);
 
-function burgerHandler(e) {
-    e.preventDefault();
+    burger.addEventListener("click", burgerHandler);
 
-    popup.classList.toggle("open");
-    burger.classList.toggle("active");
-    body.classList.toggle("noscroll");
-    renderPopup();
-}
+    function burgerHandler(e) {
+        e.preventDefault();
 
-const renderPopup = () => {
-popup.appendChild(menu);
-}
+        popup.classList.toggle("open");
+        burger.classList.toggle("active");
+        body.classList.toggle("noscroll");
+        renderPopup();
+    }
 
-const links = Array.from(menu.children);
+    const renderPopup = () => {
+    popup.appendChild(menu);
+    }
 
-links.forEach((link) => {
-    link.addEventListener("click", closeOnClick);
+    const links = Array.from(menu.children);
+
+    links.forEach((link) => {
+        link.addEventListener("click", closeOnClick);
+    });
+
+    const closeOnClick = () => {
+        popup.classList.remove("open");
+        burger.classList.remove("active");
+        body.classList.remove("noscroll");
+    }
 });
-
-const closeOnClick = () => {
-    popup.classList.remove("open");
-    burger.classList.remove("active");
-    body.classList.remove("noscroll");
-}
-
-
