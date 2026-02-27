@@ -214,7 +214,6 @@ $White_00: #ffffff;
     }
 }
 
-/* для кнопок секций main */
 @mixin btn_contact2 {
     box-sizing: border-box;
     height: 3.8rem;
@@ -271,4 +270,17 @@ $White_00: #ffffff;
     @include prata_regular_L;
 }
 
+/* ----------- Контейнеры секций main ----------- */
+@mixin container{
+    height: 100%;
+    width: 92%;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem 2rem $Black_00;
+}
 

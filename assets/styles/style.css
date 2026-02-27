@@ -38,10 +38,10 @@
 /* разные настройки размеров кнопок */
 /* для навигации в хедере и в футере */
 /* для кнопок секций main */
-/* для кнопок секций main */
 /* для значка tg (ссылки на tg-бота) - в хедере и футере */
 /* для значка tg (ссылки на tg-бота) - в секции main */
 /* ----------- Логотип ----------- */
+/* ----------- Контейнеры секций main ----------- */
 .body {
   height: 2900px;
   width: 98vw;
@@ -309,23 +309,32 @@
   height: 33%;
   width: 100%;
 }
-.main .main__block1 .main__block1-left {
+.main .main__block1 .main__block-container {
+  height: 100%;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(34, 34, 34, 0.168627451);
+}
+.main .main__block1 .main__block-container .main__block1-left {
   height: 90%;
   width: 47%;
 }
-.main .main__block1 .main__block1-left img {
+.main .main__block1 .main__block-container .main__block1-left img {
   height: 85%;
   width: 85%;
   padding: 2rem;
 }
-.main .main__block1 .main__block1-right {
+.main .main__block1 .main__block-container .main__block1-right {
   height: 90%;
   width: 53%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.main .main__block1 .main__block1-right .main__block1-right-title {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-title {
   margin-top: 4rem;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
@@ -334,16 +343,16 @@
   color: var(--primary-color);
 }
 @media screen and (min-width: 1840px) and (max-width: 2560px) {
-  .main .main__block1 .main__block1-right .main__block1-right-title {
+  .main .main__block1 .main__block-container .main__block1-right .main__block1-right-title {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block1 .main__block1-right .main__block1-right-title {
+  .main .main__block1 .main__block-container .main__block1-right .main__block1-right-title {
     font-size: 1rem;
   }
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -351,7 +360,7 @@
   width: fit-content;
   height: 70%;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-title {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-title {
   font-size: 1.5rem;
   line-height: 150%;
   letter-spacing: 0.1rem;
@@ -360,19 +369,19 @@
   color: var(--primary-color);
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block1 .main__block1-right .main__block1-right-inf .inf-title {
+  .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-title {
     font-size: 1.3rem;
   }
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument {
   display: flex;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument img {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument img {
   width: 10%;
   height: 3.5rem;
   margin-top: 0.3rem;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text {
   width: 20%;
   font-size: 1.2rem;
   line-height: 120%;
@@ -383,11 +392,11 @@
   color: var(--primary-color);
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block1 .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text {
+  .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text {
     font-size: 1.1rem;
   }
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text-mini {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text-mini {
   width: 70%;
   font-size: 1rem;
   line-height: 133%;
@@ -397,17 +406,17 @@
   color: #bcbbbb;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block1 .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text-mini {
+  .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text-mini {
     font-size: 1rem;
   }
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn {
   width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn-order {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order {
   box-sizing: border-box;
   height: 3.8rem;
   width: fit-content;
@@ -428,23 +437,23 @@
   text-decoration: none;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn-order {
+  .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order {
     font-size: 1rem;
   }
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn-order:hover {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order:hover {
   background-color: #292d32;
   color: #ffffff;
   transition: 0.2s ease-out;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn-order:active {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order:active {
   background-color: #aa6320;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn .pin {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn .pin {
   color: rgba(34, 34, 34, 0.168627451);
   cursor: pointer;
 }
-.main .main__block1 .main__block1-right .main__block1-right-inf .inf-btn .pin:hover {
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn .pin:hover {
   color: #292d32;
   transition: 0.2s ease-out;
 }
@@ -455,15 +464,25 @@
   height: 33%;
   width: 100%;
 }
-.main .main__block2 .main__block2-leftImg {
+.main .main__block2 .main__block-container {
+  height: 100%;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(34, 34, 34, 0.168627451);
+  box-shadow: none;
+}
+.main .main__block2 .main__block-container .main__block2-leftImg {
   height: 100%;
   width: 25%;
 }
-.main .main__block2 .main__block2-leftImg img {
+.main .main__block2 .main__block-container .main__block2-leftImg img {
   width: 100%;
   height: 45%;
 }
-.main .main__block2 .main__block2-central {
+.main .main__block2 .main__block-container .main__block2-central {
   height: 100%;
   width: 48%;
   display: flex;
@@ -472,7 +491,7 @@
   align-items: center;
   gap: 1rem;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service {
   width: 90%;
   height: 50%;
   padding-inline: 1rem;
@@ -483,17 +502,17 @@
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem rgba(34, 34, 34, 0.168627451);
 }
-.main .main__block2 .main__block2-central .main__block2-central-service:hover {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service:hover {
   border: solid #d5c9be;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text {
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-title {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-title {
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
@@ -502,21 +521,21 @@
   text-align: center;
 }
 @media screen and (min-width: 1840px) and (max-width: 2560px) {
-  .main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-title {
+  .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-title {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-title {
+  .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-title {
     font-size: 1rem;
   }
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-mini {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-mini {
   display: flex;
   justify-content: space-around;
   border: solid balck;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-mini img {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-mini img {
   width: 17%;
   height: 35%;
   align-self: center;
@@ -525,7 +544,7 @@
   background-color: #292d32;
   border: solid rrgb(199, 210, 35);
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-mini .service-mini-text {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-mini .service-mini-text {
   width: 70%;
   font-size: 1rem;
   line-height: 133%;
@@ -537,14 +556,14 @@
   font-style: italic;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block2 .main__block2-central .main__block2-central-service .service-text .service-mini .service-mini-text {
+  .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-mini .service-mini-text {
     font-size: 1rem;
   }
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text-mini {
   width: 60%;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text-mini ul {
   height: 95%;
   display: flex;
   flex-direction: column;
@@ -552,7 +571,7 @@
   gap: 0.5rem;
   list-style: none;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text-mini ul li {
   width: 95%;
   height: 20%;
   padding: 0.2rem;
@@ -568,20 +587,20 @@
   color: #bcbbbb;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li {
+  .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text-mini ul li {
     font-size: 1rem;
   }
 }
-.main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li:hover, .main .main__block2 .main__block2-central .main__block2-central-service .service-text-mini ul li.hovered {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text-mini ul li:hover, .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text-mini ul li.hovered {
   background-color: #ffffff;
   border: solid 0.1rem rgba(34, 34, 34, 0.168627451);
 }
-.main .main__block2 .main__block2-central .main__block2-central-service_last {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last {
   display: flex;
   height: 10%;
   width: 100%;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service_last .service_last-btn {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last .service_last-btn {
   margin: 0 auto;
   text-decoration: none;
   box-sizing: border-box;
@@ -603,25 +622,25 @@
   color: #ffffff;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block2 .main__block2-central .main__block2-central-service_last .service_last-btn {
+  .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last .service_last-btn {
     font-size: 1rem;
   }
 }
-.main .main__block2 .main__block2-central .main__block2-central-service_last .service_last-btn:hover {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last .service_last-btn:hover {
   background-color: #d78131;
   color: #ffffff;
   transition: 0.2s ease-out;
 }
-.main .main__block2 .main__block2-central .main__block2-central-service_last .service_last-btn:active {
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last .service_last-btn:active {
   background-color: #d78131;
 }
-.main .main__block2 .main__block2-right {
+.main .main__block2 .main__block-container .main__block2-right {
   height: 100%;
   width: 27%;
   display: flex;
   flex-direction: column;
 }
-.main .main__block2 .main__block2-right .block2-right_global-card {
+.main .main__block2 .main__block-container .main__block2-right .block2-right_global-card {
   width: 100%;
   height: 44%;
   display: flex;
@@ -629,14 +648,14 @@
   justify-content: space-between;
   border-bottom: solid 0.1rem #292d32;
 }
-.main .main__block2 .main__block2-right .block2-right_online-card {
+.main .main__block2 .main__block-container .main__block2-right .block2-right_online-card {
   width: 100%;
   height: 43%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.main .main__block2 .main__block2-right .card-advantages {
+.main .main__block2 .main__block-container .main__block2-right .card-advantages {
   width: 100%;
   height: 30%;
   display: flex;
@@ -644,17 +663,17 @@
   justify-content: space-around;
   border-bottom: solid 0.1rem #f3f2f2;
 }
-.main .main__block2 .main__block2-right .card-advantages_icons {
+.main .main__block2 .main__block-container .main__block2-right .card-advantages_icons {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-.main .main__block2 .main__block2-right .card-advantages_icons i {
+.main .main__block2 .main__block-container .main__block2-right .card-advantages_icons i {
   background-color: #f3f2f2;
   border: solid 0.5rem #f3f2f2;
 }
-.main .main__block2 .main__block2-right .card-advantages_text {
+.main .main__block2 .main__block-container .main__block2-right .card-advantages_text {
   width: 100%;
   height: 20%;
   font-size: 1rem;
@@ -668,7 +687,7 @@
   text-align: center;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .main .main__block2 .main__block2-right .card-advantages_text {
+  .main .main__block2 .main__block-container .main__block2-right .card-advantages_text {
     font-size: 1rem;
   }
 }
@@ -806,15 +825,6 @@
   background-size: contain;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-}
-.main .main__block-container {
-  height: 100%;
-  width: 92%;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  border-radius: 2rem;
-  box-shadow: 0.5rem 0.5rem 2rem rgba(34, 34, 34, 0.168627451);
 }
 .main .text {
   font-size: 1rem;
