@@ -1,4 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Выпадающее меню при наведении в панели навигации хедера на ссылку "Карты"
+    const servicesLink = document.querySelector('.nav__menu-services');
+    if (servicesLink) {
+        const servicesLi = servicesLink.closest('li');
+        const dropdown = servicesLi.querySelector('.dropdown');
+        let timeout;
+
+        // Функция обновления горизонтальной позиции меню
+        function updateDropdownPosition() {
+            const headerNav = document.querySelector('.header__nav');
+            const headerRect = headerNav.getBoundingClientRect();
+            const linkRect = servicesLink.getBoundingClientRect();
+            // центр ссылки относительно левого края хедера
+            const centerX = linkRect.left + linkRect.width / 2 - headerRect.left;
+            dropdown.style.left = centerX + 'px';
+        }
+
+        // Показываем меню при наведении на родительский li
+        servicesLi.addEventListener('mouseenter', () => {
+            clearTimeout(timeout);
+            updateDropdownPosition();          // обновляем позицию перед показом
+            servicesLi.classList.add('show-dropdown');
+        });
+
+        // Скрываем с задержкой при уходе с li
+        servicesLi.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                servicesLi.classList.remove('show-dropdown');
+            }, 200);
+        });
+
+        // Если мышь заходит на само меню – отменяем скрытие
+        if (dropdown) {
+            dropdown.addEventListener('mouseenter', () => {
+                clearTimeout(timeout);
+                updateDropdownPosition();      // на случай ресайза
+                servicesLi.classList.add('show-dropdown');
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                timeout = setTimeout(() => {
+                    servicesLi.classList.remove('show-dropdown');
+                }, 200);
+            });
+        }
+
+        // При изменении размера окна обновляем позицию, если меню открыто
+        window.addEventListener('resize', () => {
+            if (servicesLi.classList.contains('show-dropdown')) {
+                updateDropdownPosition();
+            }
+        });
+    }
+
 // Сохраненяем hover на li во 2 блоке main + добавляем класса .hovered
     const items = document.querySelectorAll('.service-text-mini li');
     items.forEach(li => {
