@@ -24,10 +24,10 @@
             list-style-type: none;
 
             &-information, &-services, &-contacts{
-                color: design_system.$White_00;
                 text-decoration: none;
 
                 @include design_system.btn_nav;
+                color: design_system.$White_00;
             }
         }
     }
@@ -55,7 +55,7 @@
         }
 
         .footer-itself__central{
-            width: 54%;
+            width: 50%;
 
             .footer-itself__central-icon{
                 display: flex;
@@ -72,14 +72,16 @@
         }
 
         .footer-itself__right{
-            width: fit-content;
+            width: 20%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .footer-itself__right-btn{
-                margin-top: 1rem;
-
-                background-color: design_system.$White_00;
-
                 @include design_system.btn_contact;
+                text-decoration: none;
             }
         }
 

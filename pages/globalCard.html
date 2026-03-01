@@ -94,7 +94,7 @@
 
     <!--основной блок main страницы globalCard -->
     <main class="main-global">
-        <section class="main-global__block1">
+        <section class="main-global__block1" id="card">
             <div class="main-global__block1-container">
                 <div class="main-global__block1-title">
                     <h1 class="title__text">
@@ -147,31 +147,28 @@
                         <div class="block1-inf__features">
                             <div class="card-advantages">
                                 <div class="card-advantages_icons">
+                                    <i class="fa-solid fa-dollar-sign fa-2x"></i>
+                                </div>
+                                <h4 class="card-advantages_text">
+                                    Выпуск карты - 25$
+                                </h4>
+                            </div>
+
+                            <div class="card-advantages">
+                                <div class="card-advantages_icons">
+                                    <i class="fa-solid fa-percent fa-2x"></i>
+                                </div>
+                                <h4 class="card-advantages_text">
+                                    Комиссия за пополнение - 3%
+                                </h4>
+                            </div>
+
+                            <div class="card-advantages">
+                                <div class="card-advantages_icons">
                                     <i class="fa-solid fa-ruble-sign fa-2x"></i>
-                                    <i class="fa-brands fa-bitcoin fa-2x"></i>
                                 </div>
                                 <h4 class="card-advantages_text">
-                                    пополнение - в рублях или в крипте
-                                </h4>
-                            </div>
-
-                            <div class="card-advantages">
-                                <div class="card-advantages_icons">
-                                    <i class="fa-solid fa-plane fa-2x"></i>
-                                    <i class="fa-solid fa-bed fa-2x"></i>
-                                </div>
-                                <h4 class="card-advantages_text">
-                                    для оплаты расходов заграницей
-                                </h4>
-                            </div>
-
-                            <div class="card-advantages">
-                                <div class="card-advantages_icons">
-                                    <i class="fa-brands fa-apple-pay fa-3x"></i>
-                                    <i class="fa-brands fa-google-pay fa-3x"></i>
-                                </div>
-                                <h4 class="card-advantages_text">
-                                    можно привязать к Apple или Google Pay
+                                    Обслуживание карты - бесплатно
                                 </h4>
                             </div>
                         </div>
@@ -188,19 +185,19 @@
                     </p>
                 </div>
                 <div class="main-global__block2-guide-container">
-                    <div class="guide-container__each">
+                    <div class="guide-container__each-global">
                         <a href="" class="guide-container__each-text">
                             Гайд по оформлению карты
                         </a>
                     </div>
 
-                    <div class="guide-container__each">
+                    <div class="guide-container__each-global">
                         <a href="" class="guide-container__each-text">
                             Гайд по оплате билетов на самолёт и отелей
                         </a>
                     </div>
 
-                    <div class="guide-container__each">
+                    <div class="guide-container__each-global">
                         <a href="" class="guide-container__each-text">
                             Гайд по оплате онлайн-сервисов
                         </a>
@@ -208,19 +205,19 @@
                 </div>
 
                 <div class="main-global__block2-guide-container">
-                    <div class="guide-container__each">
+                    <div class="guide-container__each-global">
                         <a href="" class="guide-container__each-text">
                             Гайд по привязке Apple Pay
                         </a>
                     </div>
 
-                    <div class="guide-container__each">
+                    <div class="guide-container__each-global">
                         <a href="" class="guide-container__each-text">
                             Гайд по привязке Google Pay
                         </a>
                     </div>
 
-                    <div class="guide-container__each">
+                    <div class="guide-container__each-global">
                         <a href="" class="guide-container__each-text">
                             Запрещённые операции
                         </a>
@@ -234,9 +231,9 @@
     <footer class="footer">
         <div class="footer__nav">
             <ul class="nav__menu" id="menu">
-                <li><a href="#aboutUs" class="nav__menu-information">About Us</a></li>
-                <li><a href="#services" class="nav__menu-services">Services</a></li>
-                <li><a href="#contacts" class="nav__menu-contacts">Contact Us</a></li>
+                <li><a href="#card" class="nav__menu-information">GLOBAL карта</a></li>
+                <li><a href="#guides" class="nav__menu-services">Инструкции</a></li>
+                <li><a href="../index.html" class="nav__menu-contacts">На главную</a></li>
             </ul>
         </div>
         <div class="footer-itself">
@@ -275,9 +272,9 @@
                 </p>
             </div>
             <div class="footer-itself__right">
-                <button class="footer-itself__right-btn" aria-label="A button to contact the company">
-                    Связаться с нами
-                </button>
+                <a href="./onlineCard.html" class="footer-itself__right-btn" aria-label="link to the page of the second version of the card Online-card">
+                    Посмотреть ONLINE карту
+                </a>
             </div>
         </div>
     </footer>
