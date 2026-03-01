@@ -2,11 +2,11 @@
 
 // Структура странички
 .body{
-    height: 2900px;
+    height: 3000px;
     width: 98vw;
 
     display: grid;
-    grid-template: 4.5% 1fr 7%/8% 1fr 10%;
+    grid-template: 4.5% 1fr 7%/8% 1fr 8%;
     background-color: var(--secondary-color);
 
     .header{

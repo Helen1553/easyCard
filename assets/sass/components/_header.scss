@@ -54,7 +54,7 @@
             
             list-style-type: none;
 
-            &-information, &-services,&-rates, &-contacts{
+            &-information, &-services,&-rates, &-guides{
                 text-decoration: none;
                 @include design_system.btn_nav;
             }
