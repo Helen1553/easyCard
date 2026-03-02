@@ -46,11 +46,11 @@
                 margin: 0 auto;
                 width: 40%;
 
-                color: design_system.$White_00;
-
                 cursor: pointer;
 
                 @include design_system.logo;
+                font-style: italic;
+                color: design_system.$White_00;
             }
         }
 

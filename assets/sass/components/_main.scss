@@ -18,22 +18,26 @@
 
             .main__block1-left{
                 height: 90%;
-                width: 45%;
+                width: 40%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 img{
-                    height: 85%;
+                    height: 80%;
                     width: 85%;
-                    padding: 2rem;
                 }
             }
 
             .main__block1-right{
                 height: 90%;
-                width: 55%;
+                width: 60%;
 
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                align-items: center;
 
                 .main__block1-right-title{
                     margin-top: 4rem;
@@ -41,12 +45,13 @@
                 }
 
                 .main__block1-right-inf{
+                    width: 90%;
+                    height: 70%;
+
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     gap: 2rem;
-                    width: fit-content;
-                    height: 70%;
 
                     .inf-title{
                         @include design_system.arial_regular_L;
@@ -282,7 +287,7 @@
 
                 .card-advantages{
                     width: 100%;
-                    height: 32%;
+                    height: 31%;
 
                     display: flex;
                     flex-direction: column;

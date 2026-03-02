@@ -74,7 +74,7 @@
   width: 90vw;
   height: 6rem;
   z-index: 1000;
-  border-bottom: 0.125rem solid #d88435;
+  border-bottom: 0.125rem solid #d5c9be;
   background-color: #ffffff;
   position: fixed;
 }
@@ -91,12 +91,13 @@
 }
 .header .header__nav .nav__logo-text {
   margin-bottom: 3.2rem;
-  font-style: italic;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
   font-weight: var(--basic-font-weight);
   color: var(--primary-color);
+  font-weight: 600;
+  font-style: italic;
 }
 @media screen and (min-width: 1840px) and (max-width: 2560px) {
   .header .header__nav .nav__logo-text {
@@ -150,7 +151,7 @@
 }
 .header .header__nav .nav__menu-information:hover, .header .header__nav .nav__menu-services:hover, .header .header__nav .nav__menu-rates:hover, .header .header__nav .nav__menu-guides:hover {
   background-color: #d88435;
-  border: #9d622b;
+  border: #d5c9be;
   color: #ffffff;
   transition: 0.4s ease-out;
 }
@@ -256,7 +257,7 @@
   left: 0;
   right: 0;
   background-color: #ffffff;
-  border-top: 0.125rem solid #9d622b;
+  border-top: 0.125rem solid #d5c9be;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.0392156863);
   z-index: 1000;
 }
@@ -271,7 +272,7 @@
   width: calc(100% - 10rem);
   height: 3.5rem;
   font-size: 1rem;
-  border: 0.125rem solid #9d622b;
+  border: 0.125rem solid #d5c9be;
   border-radius: 0.75rem;
   color: var(--primary-color);
   outline: none;
@@ -323,19 +324,22 @@
 }
 .main .main__block1 .main__block-container .main__block1-left {
   height: 90%;
-  width: 45%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main .main__block1 .main__block-container .main__block1-left img {
-  height: 85%;
+  height: 80%;
   width: 85%;
-  padding: 2rem;
 }
 .main .main__block1 .main__block-container .main__block1-right {
   height: 90%;
-  width: 55%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-title {
   margin-top: 4rem;
@@ -358,12 +362,12 @@
   }
 }
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf {
+  width: 90%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  width: fit-content;
-  height: 70%;
 }
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-title {
   font-size: 1.5rem;
@@ -429,7 +433,7 @@
   border-radius: 0.2rem;
   border: none;
   font-weight: bold;
-  background-color: #9d622b;
+  background-color: #d88435;
   transition: 0.2s ease-out;
   cursor: pointer;
   font-size: 1.1rem;
@@ -510,7 +514,7 @@
   box-shadow: 0 0 0.5rem rgba(34, 34, 34, 0.168627451);
 }
 .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service:hover {
-  border: solid #9d622b;
+  border: solid #d5c9be;
 }
 .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text {
   width: 53%;
@@ -671,7 +675,7 @@
 }
 .main .main__block2 .main__block-container .main__block2-right .card-advantages {
   width: 100%;
-  height: 32%;
+  height: 31%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -854,7 +858,7 @@
 }
 .footer .footer__nav .nav__menu-information:hover, .footer .footer__nav .nav__menu-services:hover, .footer .footer__nav .nav__menu-contacts:hover {
   background-color: #d88435;
-  border: #9d622b;
+  border: #d5c9be;
   color: #ffffff;
   transition: 0.4s ease-out;
 }
@@ -878,13 +882,14 @@
 .footer .footer-itself .footer-itself__left .footer-itself__left-title {
   margin: 0 auto;
   width: 40%;
-  color: #ffffff;
   cursor: pointer;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
   font-weight: var(--basic-font-weight);
   color: var(--primary-color);
+  font-style: italic;
+  color: #ffffff;
 }
 @media screen and (min-width: 1840px) and (max-width: 2560px) {
   .footer .footer-itself .footer-itself__left .footer-itself__left-title {
@@ -925,7 +930,7 @@
   border-radius: 0.2rem;
   border: none;
   font-weight: bold;
-  background-color: #9d622b;
+  background-color: #d88435;
   transition: 0.2s ease-out;
   cursor: pointer;
   font-size: 1.1rem;
@@ -1040,7 +1045,7 @@
     height: 100%;
     z-index: 1000;
     background-color: #ffffff;
-    border-top: 0.1rem solid #9d622b;
+    border-top: 0.1rem solid #d5c9be;
     transition: 0.4s;
   }
   .header .header__popup.open {
@@ -1093,7 +1098,7 @@
 @media screen and (min-width: 320px) and (max-width: 424px) {
   .header .header__popup .nav__menu > li > a:hover {
     background-color: #d88435;
-    border: #9d622b;
+    border: #d5c9be;
     color: #ffffff;
     transition: 0.4s ease-out;
   }
