@@ -17,6 +17,7 @@
         z-index: 1000;
         
         border-bottom: 0.125rem solid design_system.$Orange_00;
+        border-radius: 2rem;
         background-color: design_system.$White_00;
         position: fixed;
 
@@ -151,7 +152,6 @@
 /* Код для затемнение фона при прокрутке страницы*/
 .header__nav.scrolled {
     background-color: design_system.$Black_00;
-    border-radius: 2rem;
 
     &:hover{
         background-color: design_system.$White_00;
@@ -188,7 +188,7 @@
             font-size: 1rem;
             border: 0.125rem solid design_system.$Orange_00;
             border-radius: 0.75rem;
-            color: var(--primary-color);
+            color: design_system.$Grey_01;
             outline: none;
         }
 

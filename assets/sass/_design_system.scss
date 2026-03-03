@@ -9,12 +9,13 @@
 
 /* ----------- Цвета ----------- */
 $Black_00: #2222222b;
+$Black_01: #000000;
 $Grey_00: #bcbbbb;
 $Grey_01: #292d32;
 $Grey_03: #f3f2f2;
 $Orange_00: #d5c9be;
 $Orange_01: #d88435;
-$Orange_02: #aa6320;
+$Orange_02: #844c18;
 $White_00: #ffffff;
 
 /* ----------- Стили шрифтов ----------- */
@@ -205,6 +206,39 @@ $White_00: #ffffff;
 
     &:active{
         background-color: $Orange_02;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 374px){
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* для навигации в хедере и в футере страницы cardGlobal*/
+@mixin btn_nav-global {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    height: 2.5rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+
+    border-radius: 1.5rem;
+    cursor: pointer;
+
+    @include arial_italic;
+
+    &:hover{
+        background-color: $Orange_02;
+        border: $Orange_00;
+        color: $White_00;
+
+        transition: 0.4s ease-out;
+    }
+
+    &:active{
+        background-color: $Orange_01;
     }
 
     @media screen and (min-width: 320px) and (max-width: 374px){
