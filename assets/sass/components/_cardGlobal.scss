@@ -77,11 +77,18 @@
     }
 
     .header__searchContainer {
-        background-color: design_system.$Black_01;
+        background-color: design_system.$Black_00;
 
         .input-container{
             input {
                 border: 0.145rem solid design_system.$Grey_00;
+                background-color: design_system.$Black_00;
+
+                &:hover{
+                    background-color: design_system.$White_00;
+                    transition: ease 0.5s;
+                    border: 0.145rem solid design_system.$Grey_00;
+                }
             }
         }
     }

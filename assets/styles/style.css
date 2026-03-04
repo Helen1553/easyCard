@@ -260,7 +260,6 @@
   background-color: #ffffff;
   border-top: 0.125rem solid #d5c9be;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.0392156863);
-  z-index: 1000;
 }
 .header__searchContainer .input-container {
   position: relative;
@@ -429,13 +428,12 @@
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order {
   box-sizing: border-box;
   height: 3.8rem;
-  width: fit-content;
   padding: 1rem;
   border-radius: 0.2rem;
   border: none;
   font-weight: bold;
   background-color: #d88435;
-  transition: 0.2s ease-out;
+  transition: 0.4s ease-out;
   cursor: pointer;
   font-size: 1.1rem;
   line-height: 133%;
@@ -455,7 +453,7 @@
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order:hover {
   background-color: #292d32;
   color: #ffffff;
-  transition: 0.2s ease-out;
+  transition: 0.4s ease-out;
 }
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order:active {
   background-color: #844c18;
@@ -926,13 +924,12 @@
 .footer .footer-itself .footer-itself__right .footer-itself__right-btn {
   box-sizing: border-box;
   height: 3.8rem;
-  width: fit-content;
   padding: 1rem;
   border-radius: 0.2rem;
   border: none;
   font-weight: bold;
   background-color: #d88435;
-  transition: 0.2s ease-out;
+  transition: 0.4s ease-out;
   cursor: pointer;
   font-size: 1.1rem;
   line-height: 133%;
@@ -951,7 +948,7 @@
 .footer .footer-itself .footer-itself__right .footer-itself__right-btn:hover {
   background-color: #292d32;
   color: #ffffff;
-  transition: 0.2s ease-out;
+  transition: 0.4s ease-out;
 }
 .footer .footer-itself .footer-itself__right .footer-itself__right-btn:active {
   background-color: #844c18;
@@ -1541,9 +1538,15 @@
   transition: 0.4s ease-out;
 }
 .body__global .header__searchContainer {
-  background-color: rgba(0, 0, 0, 0.9411764706);
+  background-color: rgba(34, 34, 34, 0.168627451);
 }
 .body__global .header__searchContainer .input-container input {
+  border: 0.145rem solid #bcbbbb;
+  background-color: rgba(34, 34, 34, 0.168627451);
+}
+.body__global .header__searchContainer .input-container input:hover {
+  background-color: #ffffff;
+  transition: ease 0.5s;
   border: 0.145rem solid #bcbbbb;
 }
 .body__global .main__global {
