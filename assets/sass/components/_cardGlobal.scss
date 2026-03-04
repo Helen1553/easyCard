@@ -66,7 +66,15 @@
         }
     }
 
-    
+    /* Код для затемнение фона при прокрутке страницы*/
+    .header__nav.scrolled {
+        background-color: design_system.$Black_00;
+
+        &:hover{
+            background-color: design_system.$Black_01;
+            transition: 0.4s ease-out;
+        }
+    }
 
     .header__searchContainer {
         background-color: design_system.$Black_01;
@@ -280,12 +288,11 @@
         .footer-itself{
             .footer-itself__right{
                 .footer-itself__right-btn{
-                    color: design_system.$Grey_00;
+                    color: design_system.$White_00;
                     background-color: design_system.$Orange_02;
 
                     &:hover{
                         background-color: design_system.$Black_01;
-                        color: design_system.$White_00;
                     }
                 }
             }
