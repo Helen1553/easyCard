@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Карта Online от EasyCard – для оплаты зарубежных подписок и покупок (Netflix, Spotify, Amazon и др.)">
+    <meta name="keywords" content="карта Online, подписки, зарубежные сервисы, EasyCard, виртуальная карта">
+
     <link
             rel="shortcut icon"
             href="../assets/images/header/vector_shortcut-icon.svg"
@@ -19,6 +22,7 @@
 </head>
 <body class="body__online">
 
+    <!-- хедер страницы Online-карты -->
     <header class="header">
         <nav class="header__nav">
 
@@ -29,9 +33,9 @@
                     class="nav__logo-icon"
                 />
                 <a href="../index.html">
-                    <h1 class="nav__logo-text">
+                    <span class="nav__logo-text">
                         easycard
-                    </h1>
+                    </span>
                 </a>
             </div>
 
@@ -43,10 +47,10 @@
                     <a href="#services" class="nav__menu-services">Карты</a>
                     <ul class="dropdown">
                         <li>
-                            <a href="./onlineCard.html">вы в разделе карты Online</a>
+                            <a href="./onlineCard.html">Online</a>
                         </li>
                         <li>
-                            <a href="./globalCard.html">посмотреть карту Global</a>
+                            <a href="./globalCard.html">Global</a>
                         </li>
                     </ul>
                 </li>
@@ -55,22 +59,23 @@
             </ul>
 
             <div class="nav__icons">
-                <button class="pin" id="searchToggle">
+                <button class="pin" id="searchToggle" aria-label="Поиск">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
 
-                <a href="https://t.me/easycard_channel"
+                <a href="https://t.me/easycard_channel " target="_blank" class="pin" aria-label="Telegram канал"
                     target="_blank"
                     class="pin">
 
                     <i class="fa-brands fa-telegram"></i>
                 </a>
                 
-                <a href="/questions.html" class="pin">
+                <a href="/questions.html" class="pin" aria-label="Личный кабинет">
                     <i class="fa-regular fa-user fa-sm"></i>
                 </a>
             </div>
 
+            <!-- бургер для мобильной версии -->
             <div class="burger">
                 <div class="burger-menu" id="burger">
                     <span class="line"></span>
@@ -80,8 +85,10 @@
             </div>
         </nav>
 
+        <!-- попап для бургера -->
         <div class="header__popup" id="popup"></div>
 
+        <!-- поиск (активируется при клике на лупу в панели навигации) -->
         <form class="header__searchContainer" id="searchContainer">
             <div class="input-container">
                 <input type="text" id="search" placeholder="Поиск..." />
@@ -92,7 +99,7 @@
         </form>
     </header>
 
-    <!--основной блок main страницы globalCard -->
+    <!--основной блок main страницы onlineCard -->
     <main class="main__online">
         <section class="main-online__block1" id="card">
             <div class="main-online__block1-container">
@@ -113,9 +120,9 @@
                                     <i class="fa-solid fa-ruble-sign fa-2x"></i>
                                     <i class="fa-brands fa-bitcoin fa-2x"></i>
                                 </div>
-                                <h4 class="card-advantages_text">
+                                <h3 class="card-advantages_text">
                                     пополнение - в рублях или в крипте
-                                </h4>
+                                </h3>
                             </div>
 
                             <div class="card-advantages">
@@ -123,9 +130,9 @@
                                     <i class="fa-brands fa-spotify fa-2x"></i>
                                     <i class="fa-brands fa-youtube fa-2x"></i>
                                 </div>
-                                <h4 class="card-advantages_text">
+                                <h3 class="card-advantages_text">
                                     для оплаты онлайн-подписок зарубежных сервисов
-                                </h4>
+                                </h3>
                             </div>
 
                             <div class="card-advantages">
@@ -133,9 +140,9 @@
                                     <i class="fa-brands fa-amazon fa-2x"></i>
                                     <i class="fa-brands fa-ebay fa-2x"></i>
                                 </div>
-                                <h4 class="card-advantages_text">
+                                <h3 class="card-advantages_text">
                                     для оплаты онлайн-покупок иностранных сервисов
-                                </h4>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -149,27 +156,27 @@
                                 <div class="card-advantages_icons">
                                     <i class="fa-solid fa-dollar-sign fa-2x"></i>
                                 </div>
-                                <h4 class="card-advantages_text">
+                                <h3 class="card-advantages_text">
                                     Выпуск карты - 25$
-                                </h4>
+                                </h3>
                             </div>
 
                             <div class="card-advantages">
                                 <div class="card-advantages_icons">
                                     <i class="fa-solid fa-percent fa-2x"></i>
                                 </div>
-                                <h4 class="card-advantages_text">
+                                <h3 class="card-advantages_text">
                                     Комиссия за пополнение - 3%
-                                </h4>
+                                </h3>
                             </div>
 
                             <div class="card-advantages">
                                 <div class="card-advantages_icons">
                                     <i class="fa-solid fa-ruble-sign fa-2x"></i>
                                 </div>
-                                <h4 class="card-advantages_text">
+                                <h3 class="card-advantages_text">
                                     Обслуживание карты - бесплатно
-                                </h4>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -177,49 +184,50 @@
             </div>
         </section>
 
-        <section class="main-online__block2" aria-label="A guide on how to apply for a card, as well as instructions on how to link your Apple Pay and Google Pay accounts" id="guides">
+        <!-- блок main с инструкциями для online-карты-->
+        <section class="main-online__block2" aria-labelledby="online-guides" id="guides">
             <div class="main-online__block2-container">
                 <div class="main-online__block2-title">
-                    <p class="title__text">
+                    <p class="title__text" id="online-guides">
                         Инструкции для карты "ONLINE"
                     </p>
                 </div>
                 <div class="main-online__block2-guide-container">
                     <div class="guide-container__each-online">
-                        <a href="" class="guide-container__each-text">
+                        <a href="" class="guide-container__each-text" title="Инструкция по тому, как оформить карту">
                             Гайд по оформлению карты
                         </a>
                     </div>
 
                     <div class="guide-container__each-online">
-                        <a href="" class="guide-container__each-text">
-                            Гайд по оплате билетов на самолёт и отелей
+                        <a href="" class="guide-container__each-text" title="Инструкция по тому, как пополнить карту">
+                            Гайд по пополнению карты
                         </a>
                     </div>
 
                     <div class="guide-container__each-online">
-                        <a href="" class="guide-container__each-text">
-                            Гайд по оплате онлайн-сервисов
+                        <a href="" class="guide-container__each-text" title="Инструкция по тому, как оплатить ChatGPT, ClaudeAI и NanoBananaAI">
+                            Гайд по оплате нейросетей
                         </a>
                     </div>
                 </div>
 
                 <div class="main-online__block2-guide-container">
                     <div class="guide-container__each-online">
-                        <a href="" class="guide-container__each-text">
-                            Гайд по оформлению карты
+                        <a href="" class="guide-container__each-text" title="Инструкция по тому, как оплатить Netflix и HBO">
+                            Гайд по оплате стриминговых платформ
                         </a>
                     </div>
 
                     <div class="guide-container__each-online">
-                        <a href="" class="guide-container__each-text">
-                            Гайд по оплате билетов на самолёт и отелей
+                        <a href="" class="guide-container__each-text" title="Инструкция по тому, как оплатить Spotify и Youtube">
+                            Гайд по оплате музыкальных и видео-сервисов
                         </a>
                     </div>
 
                     <div class="guide-container__each-online">
-                        <a href="" class="guide-container__each-text">
-                            Гайд по оплате онлайн-сервисов
+                        <a href="" class="guide-container__each-text" title="Список запрещенных для карты операций">
+                            Запрещенные операции
                         </a>
                     </div>
                 </div>
@@ -227,7 +235,7 @@
         </section>
     </main>
 
-    <!-- Футер -->
+    <!-- футер дополнительной страницы -->
     <footer class="footer">
         <div class="footer__nav">
             <ul class="nav__menu" id="menu">
@@ -248,23 +256,14 @@
             </div>
             <div class="footer-itself__central">
                 <div class="footer-itself__central-icon">
-                    <a href="https://github.com/Helen1553" target="_blank">
-                        <img src="../assets/images/footer/vector_gh.svg" alt="github url">
-                    </a>
-                    <a href="https://www.google.ru/" target="_blank">
-                        <img src="../assets/images/footer/vector_google.svg" alt="google url">
-                    </a>
-                    <a href="https://www.gmail.com/mail/help/intl/ru/about.html?de." target="_blank">
-                        <img src="../assets/images/footer/vector_mail.svg" alt="mail url">
+                    <a href="https://www.gmail.com/mail/help/intl/ru/about.html?de." target="_blank" aria-label="Почта EasyCard">
+                        <img src="../assets/images/footer/vector_mail.svg" alt="">
                     </a>
                     <a href="https://t.me/easycard_channel" target="_blank">
-                        <img src="../assets/images/footer/vector_tg.svg" alt="telegram url">
+                        <img src="../assets/images/footer/vector_tg.svg" alt="" aria-label="Telegram канал EasyCard">
                     </a>
-                    <a href="https://vk.com/?ysclid=mafvmuczmv38861330" target="_blank">
-                        <img src="../assets/images/footer/vector_vk.svg" alt="vk url">
-                    </a>
-                    <a href="https://www.whatsapp.com/?lang=ru_RU&ysclid=mafvo1vcvs243943057" target="_blank">
-                        <img src="../assets/images/footer/vector_wa.svg" alt="whatsapp url">
+                    <a href="https://www.whatsapp.com/?lang=ru_RU&ysclid=mafvo1vcvs243943057" target="_blank" aria-label="Воцап канал EasyCard">
+                        <img src="../assets/images/footer/vector_wa.svg" alt="">
                     </a>
                 </div>
                 <p class="footer_text">
@@ -272,7 +271,7 @@
                 </p>
             </div>
             <div class="footer-itself__right">
-                <a href="./globalCard.html" class="footer-itself__right-btn" aria-label="link to the page of the second version of the card Online-card">
+                <a href="./globalCard.html" class="footer-itself__right-btn" aria-label="Перейти к карте Global">
                     Посмотреть GLOBAL карту
                 </a>
             </div>

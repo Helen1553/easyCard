@@ -1,19 +1,12 @@
 @charset "UTF-8";
-:root {
-  --basic-font-weight: 400;
-  --title-font-weight: 600;
-  --primary-color: #292d32;
-  --secondary-color: #ffffff;
-}
-
-/* ----------- Цвета ----------- */
-/* ----------- Стили шрифтов ----------- */
+/* --- цветовая палитра (scss-переменные)--- */
 @font-face {
   font-family: "Arial";
   src: url("../fonts/Arial_Regular.eot");
   src: local("Arial Regular"), local("Arial_Regular"), url("../fonts/Arial_Regular.woff2") format("woff2"), url("../fonts/Arial_Regular.woff") format("woff"), url("../fonts/Arial_Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Prata";
@@ -21,37 +14,25 @@
   src: local("Prata Regular"), local("Prata_Regular"), url("../fonts/Prata_Regular.woff2") format("woff2"), url("../fonts/Prata_Regular.woff") format("woff"), url("../fonts/Prata_Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
-/* Миксины на шрифт Arial из макета: */
-/* Arial- заголовки */
 /* служебный миксин */
-/* Arial- обычный текст */
 /* служебный миксин */
-/* Arial- подтексты */
 /* служебный миксин */
-/* Arial - италик */
 /* служебный миксин */
-/* Миксины на шрифт Prata из макета: */
-/* Prata - заголовки */
 /* служебный миксин */
 /* служебный миксин  */
-/* миксин для заголовков секции main основной и дополнительных страниц  */
 /* служебный миксин  */
-/* ----------- Стили кнопок и ссылок ----------- */
-/* разные настройки размеров кнопок */
-/* для навигации в хедере и в футере */
-/* для навигации в хедере и в футере страницы cardGlobal*/
-/* для кнопок секций main */
-/* для значка tg (ссылки на tg-бота) - в хедере и футере */
-/* для значка tg (ссылки на tg-бота) - в секции main */
-/* ----------- Логотип ----------- */
-/* ----------- Контейнеры секций main ----------- */
+body.noscroll {
+  overflow: hidden;
+}
+
 .body {
   height: 3000px;
   width: 98vw;
   display: grid;
   grid-template: 4.5% 1fr 7%/8% 1fr 8%;
-  background-color: var(--secondary-color);
+  background-color: #ffffff;
 }
 .body .header {
   grid-area: 1/1/2/4;
@@ -96,8 +77,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   font-weight: 600;
   font-style: italic;
 }
@@ -138,7 +119,7 @@
   text-transform: uppercase;
   font-family: "Arial";
   font-weight: bold;
-  color: var(--primary-color);
+  color: #292d32;
   font-style: italic;
 }
 @media screen and (min-width: 1840px) and (max-width: 2560px) {
@@ -159,6 +140,10 @@
 }
 .header .header__nav .nav__menu-information:active, .header .header__nav .nav__menu-services:active, .header .header__nav .nav__menu-rates:active, .header .header__nav .nav__menu-guides:active {
   background-color: #844c18;
+}
+.header .header__nav .nav__menu-information:focus-visible, .header .header__nav .nav__menu-services:focus-visible, .header .header__nav .nav__menu-rates:focus-visible, .header .header__nav .nav__menu-guides:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .header .header__nav .nav__menu-information, .header .header__nav .nav__menu-services, .header .header__nav .nav__menu-rates, .header .header__nav .nav__menu-guides {
@@ -193,7 +178,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   text-decoration: none;
   text-align: center;
@@ -232,6 +217,10 @@
   color: #d88435;
   transition: 0.2s ease-out;
 }
+.header .header__nav .nav__icons .pin:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
+}
 .header .burger {
   display: none;
   cursor: pointer;
@@ -240,7 +229,7 @@
   display: none;
 }
 
-/* Код для затемнение фона при прокрутке страницы*/
+/* затемнение фона при прокрутке страницы*/
 .header__nav.scrolled {
   background-color: rgba(34, 34, 34, 0.168627451);
 }
@@ -249,7 +238,7 @@
   transition: 0.4s ease-out;
 }
 
-/* Код для появления поисковой строки по сайту по клику на иконки лупы в панели навигации*/
+/* появление поисковой строки по сайту по клику на иконку лупы в панели навигации*/
 .header__searchContainer {
   display: none;
   position: fixed;
@@ -259,7 +248,7 @@
   right: 0;
   background-color: #ffffff;
   border-top: 0.125rem solid #d5c9be;
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.0392156863);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(34, 34, 34, 0.168627451);
 }
 .header__searchContainer .input-container {
   position: relative;
@@ -308,6 +297,7 @@
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
+  padding: 2rem 0;
 }
 .main .main__block1 {
   height: 31%;
@@ -346,8 +336,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   text-align: center;
   font-weight: bolder;
 }
@@ -374,8 +364,8 @@
   line-height: 150%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--title-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-title {
@@ -397,8 +387,8 @@
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-family: "Arial";
-  font-weight: var(--title-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-text .inf-text-argument .text {
@@ -411,7 +401,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -439,7 +429,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   color: #ffffff;
   color: #ffffff;
@@ -458,6 +448,10 @@
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order:active {
   background-color: #844c18;
 }
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn-order:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
+}
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn .pin {
   color: rgba(34, 34, 34, 0.168627451);
   cursor: pointer;
@@ -465,6 +459,10 @@
 .main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn .pin:hover {
   color: #292d32;
   transition: 0.2s ease-out;
+}
+.main .main__block1 .main__block-container .main__block1-right .main__block1-right-inf .inf-btn .pin:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
 }
 .main .main__block2 {
   display: flex;
@@ -526,8 +524,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   text-align: center;
   font-weight: bolder;
 }
@@ -553,7 +551,6 @@
   border-radius: 1rem;
   border: solid 0.3rem #292d32;
   background-color: #292d32;
-  border: solid rrgb(199, 210, 35);
 }
 .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service .service-text .service-mini .service-mini-text {
   width: 70%;
@@ -561,7 +558,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   padding-left: 1rem;
   font-style: italic;
@@ -598,7 +595,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   font-size: 1rem;
 }
@@ -627,14 +624,14 @@
   border-radius: 0.2rem;
   border: none;
   font-weight: bold;
-  background-color: var(--primary-color);
+  background-color: #292d32;
   transition: 0.2s ease-out;
   cursor: pointer;
   font-size: 1.1rem;
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   color: #ffffff;
 }
@@ -651,6 +648,10 @@
 .main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last .service_last-btn:active {
   background-color: #d88435;
 }
+.main .main__block2 .main__block-container .main__block2-central .main__block2-central-service_last .service_last-btn:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
+}
 .main .main__block2 .main__block-container .main__block2-right {
   height: 100%;
   width: 24%;
@@ -658,14 +659,7 @@
   flex-direction: column;
   gap: 2.5rem;
 }
-.main .main__block2 .main__block-container .main__block2-right .block2-right_global-card {
-  width: 100%;
-  height: 42%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.main .main__block2 .main__block-container .main__block2-right .block2-right_online-card {
+.main .main__block2 .main__block-container .main__block2-right .block2-right_global-card, .main .main__block2 .main__block-container .main__block2-right .block2-right_online-card {
   width: 100%;
   height: 42%;
   display: flex;
@@ -698,7 +692,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   margin: 0;
   padding: 0;
@@ -733,8 +727,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   text-align: center;
   font-weight: bolder;
 }
@@ -781,7 +775,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -797,7 +791,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -809,7 +803,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color);
+  background-color: #292d32;
 }
 .footer .footer__nav {
   height: 35%;
@@ -841,7 +835,7 @@
   text-transform: uppercase;
   font-family: "Arial";
   font-weight: bold;
-  color: var(--primary-color);
+  color: #292d32;
   font-style: italic;
   color: #ffffff;
 }
@@ -864,6 +858,10 @@
 .footer .footer__nav .nav__menu-information:active, .footer .footer__nav .nav__menu-services:active, .footer .footer__nav .nav__menu-contacts:active {
   background-color: #844c18;
 }
+.footer .footer__nav .nav__menu-information:focus-visible, .footer .footer__nav .nav__menu-services:focus-visible, .footer .footer__nav .nav__menu-contacts:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
+}
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .footer .footer__nav .nav__menu-information, .footer .footer__nav .nav__menu-services, .footer .footer__nav .nav__menu-contacts {
     padding: 0.3rem 0.8rem;
@@ -885,8 +883,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   font-style: italic;
   color: #ffffff;
 }
@@ -935,7 +933,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   color: #ffffff;
   text-decoration: none;
@@ -952,6 +950,10 @@
 }
 .footer .footer-itself .footer-itself__right .footer-itself__right-btn:active {
   background-color: #844c18;
+}
+.footer .footer-itself .footer-itself__right .footer-itself__right-btn:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
 }
 .footer .footer-itself .footer_text {
   margin: 0 auto;
@@ -1079,7 +1081,7 @@
     text-transform: uppercase;
     font-family: "Arial";
     font-weight: bold;
-    color: var(--primary-color);
+    color: #292d32;
     font-style: italic;
   }
 }
@@ -1102,6 +1104,10 @@
   }
   .header .header__popup .nav__menu > li > a:active {
     background-color: #844c18;
+  }
+  .header .header__popup .nav__menu > li > a:focus-visible {
+    outline: 2px solid #d88435;
+    outline-offset: 2px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 424px) and (min-width: 320px) and (max-width: 374px) {
@@ -1453,7 +1459,10 @@
   display: grid;
   grid-template: 5% 1fr 8%/8% 1fr 8%;
   background-color: rgba(0, 0, 0, 0.9411764706);
-  /* Код для затемнение фона при прокрутке страницы*/
+  /* затемнение фона при прокрутке страницы*/
+}
+.body__global.noscroll {
+  overflow: hidden;
 }
 .body__global .header {
   width: 100%;
@@ -1481,7 +1490,7 @@
   text-transform: uppercase;
   font-family: "Arial";
   font-weight: bold;
-  color: var(--primary-color);
+  color: #292d32;
   font-style: italic;
   color: #bcbbbb;
 }
@@ -1503,6 +1512,10 @@
 }
 .body__global .header .header__nav .nav__menu-information:active, .body__global .header .header__nav .nav__menu-services:active, .body__global .header .header__nav .nav__menu-rates:active, .body__global .header .header__nav .nav__menu-guides:active {
   background-color: #d88435;
+}
+.body__global .header .header__nav .nav__menu-information:focus-visible, .body__global .header .header__nav .nav__menu-services:focus-visible, .body__global .header .header__nav .nav__menu-rates:focus-visible, .body__global .header .header__nav .nav__menu-guides:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .body__global .header .header__nav .nav__menu-information, .body__global .header .header__nav .nav__menu-services, .body__global .header .header__nav .nav__menu-rates, .body__global .header .header__nav .nav__menu-guides {
@@ -1598,13 +1611,13 @@
   width: 100%;
   height: 10%;
   text-align: center;
-  border-bottom: solid 0.1rem #bcbbbb;
+  border-bottom: solid 0.1rem #ffffff;
   font-size: 1.5rem;
   line-height: 150%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--title-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   color: #ffffff;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -1645,11 +1658,11 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -1714,7 +1727,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   color: #bcbbbb;
   font-weight: bold;
@@ -1731,8 +1744,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   text-align: center;
   font-weight: bolder;
   color: #ffffff;
@@ -1768,7 +1781,7 @@
   text-transform: uppercase;
   font-family: "Arial";
   font-weight: bold;
-  color: var(--primary-color);
+  color: #292d32;
   font-style: italic;
   color: #bcbbbb;
 }
@@ -1791,6 +1804,10 @@
 .body__global .footer .footer__nav .nav__menu-information:active, .body__global .footer .footer__nav .nav__menu-services:active, .body__global .footer .footer__nav .nav__menu-contacts:active {
   background-color: #d88435;
 }
+.body__global .footer .footer__nav .nav__menu-information:focus-visible, .body__global .footer .footer__nav .nav__menu-services:focus-visible, .body__global .footer .footer__nav .nav__menu-contacts:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
+}
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .body__global .footer .footer__nav .nav__menu-information, .body__global .footer .footer__nav .nav__menu-services, .body__global .footer .footer__nav .nav__menu-contacts {
     padding: 0.3rem 0.8rem;
@@ -1809,6 +1826,9 @@
   width: 98vw;
   display: grid;
   grid-template: 5% 1fr 8%/8% 1fr 8%;
+}
+.body__online.noscroll {
+  overflow: hidden;
 }
 .body__online .header {
   width: 100%;
@@ -1857,7 +1877,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
-  box-shadow: 0.5rem 0.5rem 2.5rem rgba(34, 34, 34, 0.168627451);
+  box-shadow: 0.3rem 0.2rem 0.5rem rgba(34, 34, 34, 0.168627451);
 }
 .body__online .main__online .main-online__block1 .main-online__block1-container .main-online__block1-inf .block1-inf .block1-inf__text {
   width: 100%;
@@ -1868,8 +1888,9 @@
   line-height: 150%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--title-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
+  color: #292d32;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .body__online .main__online .main-online__block1 .main-online__block1-container .main-online__block1-inf .block1-inf .block1-inf__text {
@@ -1909,23 +1930,17 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .body__online .main__online .main-online__block1 .main-online__block1-container .main-online__block1-inf .block1-inf .block1-inf__features .card-advantages_text {
     font-size: 1rem;
   }
-}
-.body__online .main__online .main-online__block1 .main-online__block1-container .main-online__block1-inf .block1-inf__right {
-  width: 40%;
-  height: 90%;
-  border: solid black;
-  border-radius: 2rem;
 }
 .body__online .main__online .main-online__block2 {
   height: 45%;
@@ -1983,7 +1998,7 @@
   line-height: 133%;
   letter-spacing: 0.1rem;
   font-family: "Arial";
-  font-weight: var(--basic-font-weight);
+  font-weight: 400;
   color: #bcbbbb;
   color: #f3f2f2;
   text-shadow: 0.1rem 0.1rem 0.5rem #292d32;
@@ -2003,8 +2018,8 @@
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-family: "Prata";
-  font-weight: var(--basic-font-weight);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #292d32;
   text-align: center;
   font-weight: bolder;
 }

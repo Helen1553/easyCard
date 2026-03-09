@@ -1,13 +1,17 @@
 @use '../design_system';
 
-// Структура странички
+body.noscroll {
+    overflow: hidden;
+}
+
+// структура странички
 .body{
     height: 3000px;
     width: 98vw;
 
     display: grid;
     grid-template: 4.5% 1fr 7%/8% 1fr 8%;
-    background-color: var(--secondary-color);
+    background-color: design_system.$secondary-color;
 
     .header{
         grid-area: 1/1/2/4;

@@ -1,11 +1,11 @@
 @use '../design_system';
 
-// Стили для футера сайта
+// стили для футера сайта
 .footer{
     display: flex;
     flex-direction: column;
 
-    background-color: var(--primary-color);
+    background-color: design_system.$primary-color;
 
     .footer__nav{
         height: 35%;

@@ -1,6 +1,6 @@
 @use '../design_system';
 
-// Структура странички
+// cтруктура странички карты Global (тёмная тема)
 .body__global{
     height: 2000px;
     width: 98vw;
@@ -9,6 +9,10 @@
     grid-template: 5% 1fr 8%/8% 1fr 8%;
 
     background-color: design_system.$Black_01;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 
     .header{
         width: 100%;
@@ -66,7 +70,7 @@
         }
     }
 
-    /* Код для затемнение фона при прокрутке страницы*/
+    /* затемнение фона при прокрутке страницы*/
     .header__nav.scrolled {
         background-color: design_system.$Black_00;
 
@@ -127,74 +131,11 @@
                     align-items: center;
 
                     .block1-inf{
-                        width: 40%;
-                        height: 90%;
-
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        
-                        border-radius: 2rem;
-                        box-shadow: 0.3rem 0.2rem 0.5rem design_system.$White_00;
-
-                        .block1-inf__text{
-                            width: 100%;
-                            height: 10%;
-
-                            text-align: center;
-
-                            border-bottom: solid 0.1rem design_system.$Grey_00;
-
-                            @include design_system.arial_regular_L;
-                            color: design_system.$White_00;
-                        }
-
-                        .block1-inf__features{
-                            width: 90%;
-                            height: 70%;
-
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-
-                            .card-advantages{
-                                width: 100%;
-                                height: 30%;
-
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-
-                                border-bottom: solid 0.1rem design_system.$Grey_01;
-
-                                &_icons{
-                                    width: 100%;
-                                    height: fit-content;
-                                    
-                                    display: flex;
-                                    justify-content: center;
-                                    gap: 2rem;
-
-                                    i{
-                                        background-color: design_system.$Grey_03;
-                                        border: solid 0.5rem design_system.$Grey_03;
-                                    }
-                                }
-
-                                &_text{
-                                    width: 100%;
-                                    height: fit-content;
-                                    
-                                    @include design_system.arial_regular_S;
-                                    margin: 0;
-                                    padding: 0;
-                                    font-size: 1rem;
-
-                                    text-align: center;
-                                }
-                            }
-                        }
+                        @include design_system.card-features(
+                            $border-color: design_system.$White_00,
+                            $text-color: design_system.$White_00,
+                            $bg-color: design_system.$Grey_01
+                        );
                     }
                 }
             }

@@ -1,6 +1,6 @@
 @use "../design_system";
 
-// // Стили для хедера сайта
+// // стили для хедера сайта
 .header{
     display: flex;
     justify-content: center;
@@ -149,7 +149,7 @@
     }
 }
 
-/* Код для затемнение фона при прокрутке страницы*/
+/* затемнение фона при прокрутке страницы*/
 .header__nav.scrolled {
     background-color: design_system.$Black_00;
 
@@ -159,7 +159,7 @@
     }
 }
 
-/* Код для появления поисковой строки по сайту по клику на иконки лупы в панели навигации*/
+/* появление поисковой строки по сайту по клику на иконку лупы в панели навигации*/
 .header__searchContainer {
     display: none;
     position: fixed;
@@ -170,7 +170,7 @@
 
     background-color: design_system.$White_00;
     border-top: 0.125rem solid design_system.$Orange_00;
-    box-shadow: 0 0.25rem 0.5rem 0 #0000000A;
+    box-shadow: 0 0.25rem 0.5rem 0 design_system.$Black_00;
 
     .input-container{
         position: relative;
@@ -204,7 +204,6 @@
             height: 1.5rem;
             width: 1.5rem;
             transform: translateY(-50%);
-
             cursor: pointer;
         }
     }
