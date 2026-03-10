@@ -444,3 +444,13 @@ $White_00: #ffffff;            // белый
     }
 }
 
+// --- ОБЩИЙ МИКСИН ДЛЯ ТЕКСТА В ФУТЕРЕ ---
+@mixin text-footer{
+    margin: 0 auto;
+    padding-top: 1rem;
+
+    font-family: Arial;
+    font-size: 0.9rem;
+    color: $Grey_00;
+}
+
