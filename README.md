@@ -12,13 +12,13 @@
 Веб-сайт совместим с различными браузерами (корректно открывается в Google Chrome, Microsoft Edge, Opera и Safari).
 Сайт в процессе адаптирования для работы на различных устройствах
 
-#### Десктоп-версия:
-## Главная страница:
+## Десктоп-версия:
+#### Главная страница:
 ![image](./assets/images/readme/img_main1.png)
 ![image](./assets/images/readme/img_main2.png)
 ![image](./assets/images/readme/img_main3.png)
 
-## Дополнительные страницы схожи по структуре, но имеют разное оформление:
+#### Дополнительные страницы схожи по структуре, но имеют разное оформление:
 ![image](./assets/images/readme/img_online1.png)
 ![image](./assets/images/readme/img_global1.png)
 <br>
