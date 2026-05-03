@@ -1776,60 +1776,6 @@ body.noscroll {
   grid-area: 3/1/4/4;
   background-color: rgba(0, 0, 0, 0.9411764706);
 }
-.body__global .footer .footer__nav .nav__menu-information, .body__global .footer .footer__nav .nav__menu-services, .body__global .footer .footer__nav .nav__menu-contacts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  height: 2.5rem;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  line-height: 130%;
-  text-transform: uppercase;
-  font-family: "Arial";
-  font-weight: bold;
-  color: #292d32;
-  font-style: italic;
-  color: #bcbbbb;
-}
-@media screen and (min-width: 1840px) and (max-width: 2560px) {
-  .body__global .footer .footer__nav .nav__menu-information, .body__global .footer .footer__nav .nav__menu-services, .body__global .footer .footer__nav .nav__menu-contacts {
-    font-size: 1.3rem;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .body__global .footer .footer__nav .nav__menu-information, .body__global .footer .footer__nav .nav__menu-services, .body__global .footer .footer__nav .nav__menu-contacts {
-    font-size: 0.7rem;
-  }
-}
-.body__global .footer .footer__nav .nav__menu-information:hover, .body__global .footer .footer__nav .nav__menu-services:hover, .body__global .footer .footer__nav .nav__menu-contacts:hover {
-  background-color: #844c18;
-  border: #d5c9be;
-  color: #ffffff;
-  transition: 0.4s ease-out;
-}
-.body__global .footer .footer__nav .nav__menu-information:active, .body__global .footer .footer__nav .nav__menu-services:active, .body__global .footer .footer__nav .nav__menu-contacts:active {
-  background-color: #d88435;
-}
-.body__global .footer .footer__nav .nav__menu-information:focus-visible, .body__global .footer .footer__nav .nav__menu-services:focus-visible, .body__global .footer .footer__nav .nav__menu-contacts:focus-visible {
-  outline: 2px solid #d88435;
-  outline-offset: 2px;
-}
-@media screen and (min-width: 320px) and (max-width: 374px) {
-  .body__global .footer .footer__nav .nav__menu-information, .body__global .footer .footer__nav .nav__menu-services, .body__global .footer .footer__nav .nav__menu-contacts {
-    padding: 0.3rem 0.8rem;
-  }
-}
-.body__global .footer .footer-itself .footer-itself__right .footer-itself__right-btn {
-  color: #ffffff;
-  background-color: #844c18;
-}
-.body__global .footer .footer-itself .footer-itself__right .footer-itself__right-btn:hover {
-  background-color: rgba(0, 0, 0, 0.9411764706);
-}
 
 .body__online {
   height: 2000px;
@@ -2047,6 +1993,107 @@ body.noscroll {
   width: 100%;
   height: 100%;
   grid-area: 3/1/4/4;
+  background-color: inherit;
+}
+.body__online .footer .footer__nav {
+  border: solid rgba(34, 34, 34, 0.168627451);
+}
+.body__online .footer .footer__nav .nav__menu-information, .body__online .footer .footer__nav .nav__menu-services, .body__online .footer .footer__nav .nav__menu-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 2.5rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 130%;
+  text-transform: uppercase;
+  font-family: "Arial";
+  font-weight: bold;
+  color: #292d32;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.9411764706);
+}
+@media screen and (min-width: 1840px) and (max-width: 2560px) {
+  .body__online .footer .footer__nav .nav__menu-information, .body__online .footer .footer__nav .nav__menu-services, .body__online .footer .footer__nav .nav__menu-contacts {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .body__online .footer .footer__nav .nav__menu-information, .body__online .footer .footer__nav .nav__menu-services, .body__online .footer .footer__nav .nav__menu-contacts {
+    font-size: 0.7rem;
+  }
+}
+.body__online .footer .footer__nav .nav__menu-information:hover, .body__online .footer .footer__nav .nav__menu-services:hover, .body__online .footer .footer__nav .nav__menu-contacts:hover {
+  background-color: #d88435;
+  border: #d5c9be;
+  color: #ffffff;
+  transition: 0.4s ease-out;
+}
+.body__online .footer .footer__nav .nav__menu-information:active, .body__online .footer .footer__nav .nav__menu-services:active, .body__online .footer .footer__nav .nav__menu-contacts:active {
+  background-color: #844c18;
+}
+.body__online .footer .footer__nav .nav__menu-information:focus-visible, .body__online .footer .footer__nav .nav__menu-services:focus-visible, .body__online .footer .footer__nav .nav__menu-contacts:focus-visible {
+  outline: 2px solid #d88435;
+  outline-offset: 2px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .body__online .footer .footer__nav .nav__menu-information, .body__online .footer .footer__nav .nav__menu-services, .body__online .footer .footer__nav .nav__menu-contacts {
+    padding: 0.3rem 0.8rem;
+  }
+}
+.body__online .footer .footer-itself .footer-itself__left a .footer-itself__left-title {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-family: "Prata";
+  font-weight: 600;
+  color: #292d32;
+  color: rgba(0, 0, 0, 0.9411764706);
+}
+@media screen and (min-width: 1840px) and (max-width: 2560px) {
+  .body__online .footer .footer-itself .footer-itself__left a .footer-itself__left-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .body__online .footer .footer-itself .footer-itself__left a .footer-itself__left-title {
+    font-size: 1rem;
+  }
+}
+.body__online .footer .footer-itself .footer-itself__central .footer-itself__central-icon a img {
+  height: 42%;
+  width: 42%;
+}
+.body__online .footer .footer-itself .footer-itself__central p {
+  width: 100%;
+  text-align: center;
+  color: #bcbbbb;
+}
+.body__online .footer .footer-itself .footer-itself__right .footer-itself__right-inf p {
+  color: rgba(0, 0, 0, 0.9411764706);
+}
+.body__online .footer .footer-itself .footer-itself__right .footer-itself__right-back a {
+  color: #bcbbbb;
+}
+.body__online .footer .footer-itself .footer-itself__right .footer-itself__right-back a:hover {
+  color: #bcbbbb;
+  transition: ease 0.4s;
+}
+.body__online .footer .footer-itself .footer-itself__right .footer-itself__right-back a p {
+  color: #bcbbbb;
+}
+.body__online .footer .footer-itself .footer-itself__right .footer-itself__right-back a p:hover {
+  color: #bcbbbb;
+}
+.body__online .footer .footer-itself .footer_text {
+  margin: 0 auto;
+  padding-top: 1rem;
+  font-family: Arial;
+  font-size: 0.9rem;
+  color: #bcbbbb;
 }
 
 /*# sourceMappingURL=style.css.map */

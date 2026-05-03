@@ -1,34 +1,27 @@
-# This is a test project, which aims to create a website using a design from the Figma graphic design tool.
-
-One of the conditions of the assignment was to completely change the graphic design of the layout: replace text, images and colors at your discretion, using imagination and artificial intelligence capabilities.
-<br>
-
-## The final project is the PetHome website.
-"PetHome" - is a company providing pet care services, including dog/cat walking, bathing, various types of haircuts and grooming, visits to the veterinarian, and care for pets while owners are away  and much more. 
-<br>
-
-## Project structure:
-### The website is a one-page landing, which contains 3 information blocks about the company: "About us", "What we Do" and "Contacts".
-
-The project is based on the Figma graphic editor.
-The project is based on html5, css3, and js.
-
-The project architecture is built using the Sass preprocessor
-
-The website is compatible with different browsers (it opens correctly in Google Chrome, Microsoft Edge, Opera, and Safari).
-The website is adapted to work on various devices (desktop, tablet, mobile):
-
-#### Desktop version:
-![image](./assets/images/readme/img_first.jpg)
-![image](./assets/images/readme/img_second.jpg)
-![image](./assets/images/readme/img_third.jpg)
+# Это тестовый проект создания сайта-визитки для продуктовой линейки виртуальных карт для покупок заграницей
 
 <br>
 
-#### Burger-menu In the mobile version:
-![image](./assets/images/readme/img_burger.jpg)
+## Структура проекта:
+### Сайт представлен главной страницей, включающей основную информацию о продукте (блоки: О нас", "Карты" и "Инструкция") и 2 дополнительных страницы по локальным продуктам со своей спецификой.
 
-### The code contains all the necessary comments to easily understand the structure of the project
+Проект основан на html5, css3 и js.
 
-### The project was created without using any libraries or frameworks
+Архитектура проекта построена с использованием препроцессора Sass.
+
+Веб-сайт совместим с различными браузерами (корректно открывается в Google Chrome, Microsoft Edge, Opera и Safari).
+Сайт в процессе адаптирования для работы на различных устройствах
+
+#### Десктоп-версия:
+## Главная страница:
+![image](./assets/images/readme/img_main1.png)
+![image](./assets/images/readme/img_main2.png)
+![image](./assets/images/readme/img_main3.png)
+
+## Дополнительные страницы схожи по структуре, но имеют разное оформление:
+![image](./assets/images/readme/img_online1.png)
+![image](./assets/images/readme/img_global1.png)
+<br>
+
+
 

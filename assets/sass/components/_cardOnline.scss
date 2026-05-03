@@ -142,5 +142,77 @@
         width: 100%;
         height: 100%;
         grid-area: 3/1/4/4;
+        background-color: inherit;
+        
+
+        .footer__nav{
+            border: solid design_system.$Black_00;
+
+            .nav__menu{
+                &-information, &-services, &-contacts{
+                    @include design_system.btn_nav;
+                    color: design_system.$Black_01;
+                }
+            }
+        }
+
+        .footer-itself{
+            .footer-itself__left{
+                a{
+                    .footer-itself__left-title{
+                        @include design_system.logo;
+                        color: design_system.$Black_01;
+                    }
+                }
+            }
+
+            .footer-itself__central{
+                .footer-itself__central-icon{
+                    a{
+                        img{
+                            height: 42%;
+                            width: 42%;
+                        }
+                    }
+                }
+
+                p{
+                    width: 100%;
+                    text-align: center;
+                    color: design_system.$Grey_00;
+                }
+            }
+
+            .footer-itself__right{
+                .footer-itself__right-inf{
+                    p{
+                        color: design_system.$Black_01;
+                    }
+                }
+
+                .footer-itself__right-back{
+                    a{
+                        color: design_system.$Grey_00;
+
+                        &:hover{
+                                color: design_system.$Grey_00;
+                                transition: ease 0.4s;
+                            }
+
+                        p{
+                            color: design_system.$Grey_00;
+
+                            &:hover{
+                                color: design_system.$Grey_00;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer_text{
+                @include design_system.text-footer;
+            }
+        }
     }
 }

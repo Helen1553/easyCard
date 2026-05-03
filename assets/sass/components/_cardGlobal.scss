@@ -223,27 +223,5 @@
         height: 100%;
         grid-area: 3/1/4/4;
         background-color: design_system.$Black_01;
-
-        .footer__nav{
-            .nav__menu{
-                &-information, &-services, &-contacts{
-                    @include design_system.btn_nav-global;
-                    color: design_system.$Grey_00;
-                }
-            }
-        }
-
-        .footer-itself{
-            .footer-itself__right{
-                .footer-itself__right-btn{
-                    color: design_system.$White_00;
-                    background-color: design_system.$Orange_02;
-
-                    &:hover{
-                        background-color: design_system.$Black_01;
-                    }
-                }
-            }
-        }
     }
 }
